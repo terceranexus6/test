@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#give perms
+
+chmod u+x ini
+chmod u+x set
+chmod u+x cyberpunk
+chmod u+x kawaii
+chmod u+x water
+chmod u+x happy
+

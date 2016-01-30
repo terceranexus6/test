@@ -1,0 +1,103 @@
+#!/bin/bash
+tput sgr0
+tput setf 1
+
+echo "you chose happy theme"
+tput setf 4
+echo "WELCOME YOU!"
+sleep 1
+clear
+tput setf 7
+echo "!"
+echo "loading"
+sleep 0.5
+clear
+tput setf 3
+echo "!!"
+echo "loading"
+sleep 0.5
+clear
+tput setf 4
+echo "!!!"
+echo "loading"
+sleep 0.5
+clear
+tput setf 2
+echo "HAPPY HAPPY TIME!"
+cd com
+cat happypy1.txt
+sleep 1
+cd ..
+
+echo "welcome, there"
+tput setf 2
+echo "******************************************************************"
+tput setf 6
+echo ":D if you want to change this happy theme now, press 1. " 
+tput setf 5
+echo ":D if you want to see ascii happy: 2"
+tput setf 3
+echo ":D if you want to continue working on your new directory, press 3 "
+tput setf 2
+echo "******************************************************************"
+tput setf 7
+
+read -p"your option is! : " OPT
+
+
+echo "choose a color to keep working with:" 
+tput setf 4
+echo "1- red"
+tput setf 3
+echo "2- blue"
+tput setf 2
+echo "3- green"
+tput setf 6
+echo "4- yellow"
+tput setf 5
+echo "5- pink"
+read -p"your option is: " COLOR
+
+if [ $COLOR = 1 ]
+then
+tput setf 4
+elif [ $COLOR = 2 ]
+then
+tput setf 3
+elif [ $COLOR = 3 ]
+then
+tput setf 2
+elif [ $COLOR = 4 ]
+then
+tput setf 6
+elif [ $COLOR = 5 ]
+then
+tput setf 5
+fi
+
+case $OPT in
+	1) cd ..
+	   ./ini 
+           ;;
+	2) cd com
+           cat happypy.txt	
+           cd .. ;;   
+        3) echo "this is how your working folder is now ^^:"
+	   cd ..
+	   file="foldname.txt" 
+	   name=$(cat "$file")  
+	   cd $name	
+	   ls
+	   file2="username.txt" 
+	   name2=$(cat "$file2")
+	   echo "WELCOME! :) >"
+           echo $name2
+	   echo "if you want to keep working on it please write 'cd nameofyourfolder'"
+	   ;;
+
+	*) echo "NOPE! sprry pal, WROGN NUMBER"
+	   sleep 2
+	   
+	   ./happy
+            ;;
+esac

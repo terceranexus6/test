@@ -1,0 +1,25 @@
+#!/bin/bash
+for i in $(seq 1 2)
+do
+echo "l"
+sleep 1
+clear
+echo "lo"
+sleep 1
+clear
+echo "loa"
+sleep 1
+clear
+echo "load"
+sleep 1
+clear
+echo "loadi"
+sleep 1
+clear
+echo "loadin"
+sleep 1
+clear
+echo "loading"
+sleep 1
+clear
+done
